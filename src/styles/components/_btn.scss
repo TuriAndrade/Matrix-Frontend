@@ -1,0 +1,92 @@
+.btnPrimary {
+  background-color: $colorPrimaryLight;
+  text-decoration: none;
+  color: $colorWhite;
+  font-size: $defaultFontSize;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 0.8rem;
+  line-height: 100%;
+  transition: opacity 0.1s;
+
+  @include notTouchDevice() {
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+.btnText {
+  padding: 0.8rem;
+  text-decoration: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  position: relative;
+
+  p {
+    font-weight: 600;
+    font-size: $defaultFontSize;
+    letter-spacing: 1.5px;
+    line-height: 100%;
+  }
+
+  &--icon {
+    height: 0.7rem;
+  }
+
+  &--black {
+    p {
+      color: $colorBlack;
+    }
+  }
+
+  &--black &--icon {
+    &,
+    & * {
+      fill: $colorBlack;
+    }
+  }
+
+  &--white {
+    p {
+      color: $colorWhite;
+    }
+  }
+
+  &--white &--icon {
+    &,
+    & * {
+      fill: $colorWhite;
+    }
+  }
+
+  &--primary {
+    p {
+      color: $colorPrimary;
+    }
+  }
+
+  &--primary &--icon {
+    &,
+    & * {
+      fill: $colorPrimary;
+    }
+  }
+
+  &--primaryLight {
+    p {
+      color: $colorPrimaryLight;
+    }
+  }
+
+  &--primaryLight &--icon {
+    &,
+    & * {
+      fill: $colorPrimaryLight;
+    }
+  }
+}

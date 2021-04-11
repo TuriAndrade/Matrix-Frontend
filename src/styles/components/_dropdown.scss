@@ -1,0 +1,70 @@
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  box-shadow: 0 1.5rem 4rem rgba($colorBlack, 0.2);
+  background-color: $colorWhite;
+  transform-origin: center;
+  border-radius: 4px;
+  overflow: hidden;
+  display: grid;
+  grid-auto-rows: minmax(5rem, min-content);
+
+  &-enter {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.7);
+  }
+
+  &-enter-active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: all 0.3s;
+  }
+
+  &-exit {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  &-exit-active {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.7);
+    transition: all 0.3s;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 1.5rem;
+    background-color: $colorWhite;
+    transition: background-color 0.2s;
+    padding: 1rem 2rem;
+
+    @include notTouchDevice() {
+      &:hover {
+        background-color: $colorGreyLight;
+      }
+    }
+
+    p {
+      width: max-content;
+      color: $colorPrimary;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    &--icon {
+      width: 2.3rem;
+
+      &,
+      & * {
+        fill: $colorPrimary;
+      }
+    }
+  }
+}

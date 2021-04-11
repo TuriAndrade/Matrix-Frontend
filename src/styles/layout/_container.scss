@@ -1,0 +1,53 @@
+.container {
+  position: relative;
+  display: grid;
+  width: 100%;
+  grid-template-rows:
+    [r-nb-start] 6.5rem [r-nb-end r-main-start] minmax(
+      calc(100vh - 6.5rem),
+      min-content
+    )
+    [r-main-end];
+  grid-template-columns:
+    [c-sb-start] min-content [c-sb-end c-left-start] 1fr [c-left-end c-main-start] minmax(
+      auto,
+      144rem
+    )
+    [c-main-end c-right-start] 1fr [c-right-end];
+
+  &__navBar {
+    grid-row: r-nb-start / r-nb-end;
+    grid-column: 1 / -1;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    /*
+        Position sticky instead of fixed because i want it fixed to the viewport but
+        with dimensions recognized by it's parent and relative to it
+    */
+  }
+
+  &__sideBar {
+    grid-row: r-main-start / r-main-end;
+    grid-column: c-sb-start / c-sb-end;
+    position: sticky;
+    top: 6.5rem;
+    min-height: calc(100vh - 6.5rem);
+    z-index: 50;
+
+    /*
+        Position sticky instead of fixed because i want it fixed to the viewport but
+        with dimensions recognized by it's parent and relative to it
+    */
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__main {
+    grid-row: r-main-start / r-main-end;
+    grid-column: c-main-start / c-main-end;
+  }
+}

@@ -1,0 +1,163 @@
+.sideBar {
+  display: grid;
+  background-color: $colorWhite;
+  grid-auto-rows: minmax(6rem, max-content);
+  border-top: 1px solid $colorGreyLight;
+  height: 100%;
+
+  &--closed {
+    width: 6rem;
+  }
+
+  @include respond(tabPort) {
+    width: 6rem;
+  }
+
+  &__item {
+    display: grid;
+    text-decoration: none;
+    grid-template-columns: repeat(2, max-content) 1fr;
+    gap: 2rem;
+    align-items: center;
+    background-color: $colorWhite;
+    transition: all 0.2s;
+    padding: 0.5rem 2rem;
+    border-bottom: 1px solid $colorGreyLight;
+
+    @include respond(tabPort) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      padding: 0;
+      p {
+        display: none;
+      }
+    }
+
+    p {
+      width: max-content;
+      color: $colorPrimary;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    &-enter-active,
+    &-enter-done,
+    &-exit {
+      background-color: $colorPrimary;
+      border-bottom: 1px solid $colorPrimary;
+
+      p {
+        color: $colorWhite;
+      }
+    }
+
+    &-appear-active {
+      background-color: $colorPrimary;
+      border-bottom: 1px solid $colorPrimary;
+      transition: none !important;
+
+      p {
+        color: $colorWhite;
+        transition: none !important;
+      }
+    }
+
+    @include notTouchDevice() {
+      &:hover {
+        background-color: $colorPrimary;
+        border-bottom: 1px solid $colorPrimary;
+
+        p {
+          color: $colorWhite;
+        }
+      }
+    }
+  }
+
+  &__itemIndicator {
+    visibility: hidden;
+    opacity: 0;
+    width: 0.8rem;
+    justify-self: end;
+    transition: all 0.2s;
+
+    @include respond(tabPort) {
+      display: none;
+    }
+
+    &,
+    & * {
+      fill: $colorWhite;
+    }
+  }
+
+  &__item-enter-active &__itemIndicator,
+  &__item-enter-done &__itemIndicator,
+  &__item-exit &__itemIndicator {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__item-appear-active &__itemIndicator {
+    visibility: visible;
+    opacity: 1;
+    transition: none !important;
+  }
+
+  @include notTouchDevice() {
+    &__item:hover &__itemIcon {
+      &,
+      & * {
+        fill: $colorWhite;
+      }
+    }
+  }
+
+  &__itemIconBox {
+    display: flex;
+    align-items: center;
+  }
+
+  &__itemIcon {
+    width: 2.3rem;
+    max-width: 100%;
+
+    &,
+    & * {
+      fill: $colorPrimary;
+      transition: fill 0.1s;
+    }
+  }
+
+  &__item-enter-active &__itemIcon,
+  &__item-enter-done &__itemIcon,
+  &__item-exit &__itemIcon {
+    &,
+    & * {
+      fill: $colorWhite;
+    }
+  }
+
+  &__item-appear-active &__itemIcon {
+    &,
+    & * {
+      fill: $colorWhite;
+      transition: none !important;
+    }
+  }
+
+  &--closed &__item {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0;
+    p {
+      display: none;
+    }
+  }
+
+  &--closed &__itemIndicator {
+    display: none;
+  }
+}
