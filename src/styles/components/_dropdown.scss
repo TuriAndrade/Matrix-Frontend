@@ -54,12 +54,16 @@
     p {
       width: max-content;
       color: $colorPrimary;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: 600;
     }
 
     &--icon {
       width: 2.3rem;
+
+      @include respond(tabPort) {
+        width: 2.5rem;
+      }
 
       &,
       & * {

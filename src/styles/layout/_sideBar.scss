@@ -2,8 +2,26 @@
   display: grid;
   background-color: $colorWhite;
   grid-auto-rows: minmax(6rem, max-content);
-  border-top: 1px solid $colorGreyLight;
   height: 100%;
+
+  &--default {
+    //I tested out the screen sizes that fit the sideBar
+    @media only screen and (max-width: 56.25em) and (max-height: 25em) {
+      display: none;
+    } //tabPort
+
+    @media only screen and (min-width: 56.25em) and (max-height: 28em) {
+      display: none;
+    } //tabLand
+
+    @media only screen and (min-width: 75em) and (max-height: 31em) {
+      display: none;
+    } //normalDesktop
+
+    @media only screen and (min-width: 112.5em) and (max-height: 37.5em) {
+      display: none;
+    } //bigDesktop
+  }
 
   &--closed {
     width: 6rem;
@@ -36,7 +54,7 @@
     p {
       width: max-content;
       color: $colorPrimary;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       letter-spacing: 1px;
       font-weight: 600;
       transition: color 0.2s;
@@ -128,6 +146,10 @@
     & * {
       fill: $colorPrimary;
       transition: fill 0.1s;
+    }
+
+    @include respond(tabPort) {
+      width: 2.5rem;
     }
   }
 

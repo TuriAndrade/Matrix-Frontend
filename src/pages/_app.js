@@ -1,5 +1,6 @@
 import "../styles/main.scss";
 import Head from "next/head";
+import Context from "../components/context";
 import Container from "../components/container";
 
 function MyApp({ Component, pageProps }) {
@@ -9,9 +10,11 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/logo.webp" />
         <title>Matrix | Estudo ao seu alcance</title>
       </Head>
-      <Container>
-        <Component {...pageProps} />
-      </Container>
+      <Context>
+        <Container>
+          <Component {...pageProps} />
+        </Container>
+      </Context>
     </>
   );
 }

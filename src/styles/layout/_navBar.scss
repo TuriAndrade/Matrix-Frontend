@@ -13,6 +13,7 @@
         minmax(max-content, 5rem) [c-item-end]);
   column-gap: 4rem;
   grid-template-rows: 1fr;
+  border-bottom: 1px solid $colorGreyLight;
 
   /*
       I can't use only max-content on c-logo-start and in the repeat function
@@ -27,6 +28,7 @@
 
   @include respond(tabPort) {
     padding: 0;
+    justify-items: center;
     justify-content: start;
     grid-template-columns:
       [c-left-start] minmax(0, 2rem)
@@ -64,27 +66,45 @@
 
     &::before {
       width: 2.5rem;
-      transform: translateY(calc(-50% - 0.7rem));
+      transform: translate(0, calc(-50% - 0.7rem));
     }
 
     &::after {
       width: 4rem;
-      transform: translateY(calc(-50% + 0.7rem));
+      transform: translate(0, calc(-50% + 0.7rem));
+    }
+
+    &-enter {
+      &::after,
+      &::before {
+        left: 0;
+      }
+
+      &::before {
+        width: 2.5rem;
+        transform: translate(0, calc(-50% - 0.7rem));
+      }
+
+      &::after {
+        width: 4rem;
+        transform: translate(0, calc(-50% + 0.7rem));
+      }
     }
 
     &-enter-active {
       &::after,
       &::before {
-        width: 4rem;
+        left: 50%;
+        width: 3.25rem;
         transition: all 0.3s;
       }
 
       &::after {
-        transform: translateY(-50%) rotateZ(45deg);
+        transform: translate(-50%, -50%) rotateZ(45deg);
       }
 
       &::before {
-        transform: translateY(-50%) rotateZ(-45deg);
+        transform: translate(-50%, -50%) rotateZ(-45deg);
       }
     }
 
@@ -92,28 +112,34 @@
     &-exit {
       &::after,
       &::before {
-        width: 4rem;
+        left: 50%;
+        width: 3.25rem;
       }
 
       &::after {
-        transform: translateY(-50%) rotateZ(45deg);
+        transform: translate(-50%, -50%) rotateZ(45deg);
       }
 
       &::before {
-        transform: translateY(-50%) rotateZ(-45deg);
+        transform: translate(-50%, -50%) rotateZ(-45deg);
       }
     }
 
     &-exit-active {
+      &::after,
+      &::before {
+        left: 0;
+      }
+
       &::before {
         width: 2.5rem;
-        transform: translateY(calc(-50% - 0.7rem));
+        transform: translate(0, calc(-50% - 0.7rem));
         transition: all 0.3s;
       }
 
       &::after {
         width: 4rem;
-        transform: translateY(calc(-50% + 0.7rem));
+        transform: translate(0, calc(-50% + 0.7rem));
         transition: all 0.3s;
       }
     }

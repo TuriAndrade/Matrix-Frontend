@@ -23,7 +23,7 @@ export default function SideBar() {
   const progress = router.pathname === "/progress";
 
   return (
-    <div className="sideBar">
+    <div className="sideBar sideBar--default">
       <CSSTransition
         classNames="sideBar__item"
         timeout={{ enter: 200, exit: 0 }}
