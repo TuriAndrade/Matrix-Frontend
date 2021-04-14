@@ -9,22 +9,24 @@ import Video from "../../svgs/icons/video";
 import List from "../../svgs/icons/list";
 import { CSSTransition } from "react-transition-group";
 import Link from "next/link";
-import { HiddenSideBarContext } from "../context/context";
+import { HiddenSideBarContext } from "../context/hiddenSideBar";
 
 export default function NavBar() {
-  const [menuIn, setMenuIn] = useState(false);
   const [dropdownIn, setDropdownIn] = useState(false);
 
-  const { setHiddenSideBarIn } = useContext(HiddenSideBarContext);
+  const { hiddenSideBarIn, setHiddenSideBarIn } = useContext(
+    HiddenSideBarContext
+  );
 
   return (
     <div className="navBar">
-      <CSSTransition in={menuIn} classNames="navBar__menuBtn" timeout={300}>
+      <CSSTransition
+        in={hiddenSideBarIn}
+        classNames="navBar__menuBtn"
+        timeout={300}
+      >
         <button
-          onClick={() => {
-            setMenuIn((prevstate) => !prevstate);
-            setHiddenSideBarIn((prevstate) => !prevstate);
-          }}
+          onClick={() => setHiddenSideBarIn((prevstate) => !prevstate)}
           className="navBar__menuBtn"
         ></button>
       </CSSTransition>

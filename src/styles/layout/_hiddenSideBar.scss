@@ -1,6 +1,198 @@
 .hiddenSideBar {
-  position: relative;
+  position: sticky; //sticky instead of fixed because I want it relative to it's parent's dimensions and position
+  overflow-y: auto;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: $colorWhite;
+  background-color: rgba($colorBlack, 0.6);
+
+  &__link {
+    &,
+    &:link,
+    &:visited,
+    &:active {
+      color: $colorBlack;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 2.8rem;
+      display: inline-flex;
+      padding: 1rem;
+    }
+  }
+
+  &__item {
+    &,
+    &:link,
+    &:visited,
+    &:active {
+      display: grid;
+      text-decoration: none;
+      grid-template-columns: repeat(2, minmax(min-content, max-content)) 1fr;
+      gap: 2rem;
+      align-items: center;
+      background-color: $colorWhite;
+      transition: all 0.2s;
+      padding: 0.5rem 2rem;
+      border-bottom: 1px solid $colorGreyLight;
+    }
+
+    p {
+      color: $colorPrimary;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    &-enter-active,
+    &-enter-done,
+    &-exit {
+      &,
+      &:link,
+      &:visited,
+      &:active {
+        background-color: $colorPrimary;
+        border-bottom: 1px solid $colorPrimary;
+      }
+
+      p {
+        color: $colorWhite;
+      }
+    }
+
+    &-appear-active {
+      &,
+      &:link,
+      &:visited,
+      &:active {
+        background-color: $colorPrimary;
+        border-bottom: 1px solid $colorPrimary;
+        transition: none !important;
+      }
+
+      p {
+        color: $colorWhite;
+        transition: none !important;
+      }
+    }
+  }
+
+  &__itemIndicator {
+    visibility: hidden;
+    opacity: 0;
+    width: 1rem;
+    justify-self: end;
+    transition: all 0.2s;
+
+    &,
+    & * {
+      fill: $colorWhite;
+    }
+  }
+
+  &__item-enter-active &__itemIndicator,
+  &__item-enter-done &__itemIndicator,
+  &__item-exit &__itemIndicator {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__item-appear-active &__itemIndicator {
+    visibility: visible;
+    opacity: 1;
+    transition: none !important;
+  }
+
+  &__itemIconBox {
+    display: flex;
+    align-items: center;
+  }
+
+  &__itemIcon {
+    width: 2.5rem;
+    max-width: 100%;
+
+    &,
+    & * {
+      fill: $colorPrimary;
+      transition: fill 0.1s;
+    }
+  }
+
+  &__item-enter-active &__itemIcon,
+  &__item-enter-done &__itemIcon,
+  &__item-exit &__itemIcon {
+    &,
+    & * {
+      fill: $colorWhite;
+    }
+  }
+
+  &__item-appear-active &__itemIcon {
+    &,
+    & * {
+      fill: $colorWhite;
+      transition: none !important;
+    }
+  }
+
+  &__closeArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    min-height: 100%;
+    background-color: $colorWhite;
+    z-index: 20;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+
+    &-enter,
+    &-appear {
+      transform: translateX(-100%);
+    }
+
+    &-enter-active,
+    &-appear-active {
+      transform: translateX(0);
+      transition: transform 0.3s ease-out 0.3s;
+    }
+
+    &-exit {
+      transform: translateX(0);
+    }
+
+    &-exit-active {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in;
+    }
+  }
+
+  &__nbSection {
+    padding: 3rem;
+    border-bottom: 1px solid $colorGreyLight;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__sbSection {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(8rem, 1fr));
+    grid-auto-rows: 8rem;
+  }
 }

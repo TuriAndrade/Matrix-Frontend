@@ -40,16 +40,21 @@
   }
 
   &__menuBtn {
-    grid-row: 1 / -1;
-    grid-column: c-menu-start / c-menu-end;
-    height: 4rem;
-    width: 4rem;
-    background: transparent;
-    position: relative;
-    display: none;
+    &,
+    &:link,
+    &:visited,
+    &:active {
+      grid-row: 1 / -1;
+      grid-column: c-menu-start / c-menu-end;
+      height: 4rem;
+      width: 4rem;
+      background: transparent;
+      position: relative;
+      display: none;
 
-    @include respond(tabPort) {
-      display: flex;
+      @include respond(tabPort) {
+        display: flex;
+      }
     }
 
     &::after,
@@ -146,13 +151,17 @@
   }
 
   &__logo {
-    cursor: pointer;
-    text-decoration: none;
-    grid-row: 1 / -1;
-    grid-column: c-logo-start / c-logo-end;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+    &,
+    &:link,
+    &:visited,
+    &:active {
+      text-decoration: none;
+      grid-row: 1 / -1;
+      grid-column: c-logo-start / c-logo-end;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
 
     img {
       height: 3rem;

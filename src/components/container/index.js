@@ -4,7 +4,7 @@ import SideBar from "../sideBar";
 import SimpleSideBar from "../simpleSideBar";
 import HiddenSideBar from "../hiddenSideBar";
 import { useRouter } from "next/router";
-import { HiddenSideBarContext } from "../context/context";
+import { HiddenSideBarContext } from "../context/hiddenSideBar";
 import { CSSTransition } from "react-transition-group";
 
 export default function Container(props) {
@@ -22,7 +22,7 @@ export default function Container(props) {
       <CSSTransition
         in={hiddenSideBarIn}
         classNames="container__hiddenSideBar"
-        timeout={400}
+        timeout={{ enter: 300, exit: 600 }}
         unmountOnExit
       >
         <div className="container__hiddenSideBar">

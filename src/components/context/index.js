@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { HiddenSideBarContext } from "./context";
+import { HiddenSideBarContext } from "./hiddenSideBar";
 
 export default function Context(props) {
   const [hiddenSideBarIn, setHiddenSideBarIn] = useState(false);

@@ -32,39 +32,49 @@
   }
 
   &__item {
-    display: grid;
-    text-decoration: none;
-    grid-template-columns: repeat(2, max-content) 1fr;
-    gap: 2rem;
-    align-items: center;
-    background-color: $colorWhite;
-    transition: all 0.2s;
-    padding: 0.5rem 2rem;
-    border-bottom: 1px solid $colorGreyLight;
+    &,
+    &:link,
+    &:visited,
+    &:active {
+      display: grid;
+      text-decoration: none;
+      grid-template-columns: repeat(2, max-content) 1fr;
+      gap: 2rem;
+      align-items: center;
+      background-color: $colorWhite;
+      transition: all 0.2s;
+      padding: 0.5rem 2rem;
+      border-bottom: 1px solid $colorGreyLight;
 
-    @include respond(tabPort) {
-      grid-template-columns: 1fr;
-      justify-items: center;
-      padding: 0;
-      p {
-        display: none;
+      @include respond(tabPort) {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 0;
       }
     }
 
     p {
-      width: max-content;
       color: $colorPrimary;
       font-size: 1.5rem;
       letter-spacing: 1px;
       font-weight: 600;
       transition: color 0.2s;
+
+      @include respond(tabPort) {
+        display: none;
+      }
     }
 
     &-enter-active,
     &-enter-done,
     &-exit {
-      background-color: $colorPrimary;
-      border-bottom: 1px solid $colorPrimary;
+      &,
+      &:link,
+      &:visited,
+      &:active {
+        background-color: $colorPrimary;
+        border-bottom: 1px solid $colorPrimary;
+      }
 
       p {
         color: $colorWhite;
@@ -72,9 +82,14 @@
     }
 
     &-appear-active {
-      background-color: $colorPrimary;
-      border-bottom: 1px solid $colorPrimary;
-      transition: none !important;
+      &,
+      &:link,
+      &:visited,
+      &:active {
+        background-color: $colorPrimary;
+        border-bottom: 1px solid $colorPrimary;
+        transition: none !important;
+      }
 
       p {
         color: $colorWhite;
