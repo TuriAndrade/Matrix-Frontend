@@ -1,0 +1,98 @@
+.homePage {
+  &__main {
+    position: relative;
+    z-index: 10;
+    padding: 10rem 6rem 42rem 6rem;
+    overflow: hidden;
+
+    @include respond(phone) {
+      padding: 6rem 6rem 50rem 6rem;
+    }
+
+    @include respond(smallPhone) {
+      padding: 3rem 3rem 50rem 3rem;
+    }
+  }
+
+  &__mainBackground {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    min-width: 114rem;
+    width: 90%;
+    z-index: -1;
+
+    &--default {
+      @include respond(tabPort) {
+        display: none;
+      }
+    }
+
+    &--tabPort {
+      display: none;
+      width: 110%;
+      min-width: 95rem;
+      left: auto;
+      right: 0;
+      transform: translateX(0);
+
+      @include respond(tabPort) {
+        display: flex;
+      }
+
+      @include respond(phone) {
+        min-width: 80rem;
+      }
+
+      @include respond(smallPhone) {
+        right: auto;
+        left: 50%;
+        transform: translateX(-60%);
+      }
+    }
+  }
+
+  &__mainHeading {
+    width: 29rem;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+
+    @include respond(tabPort) {
+      width: 30rem;
+    }
+  }
+
+  &__benefits {
+    position: relative;
+    z-index: 5;
+    padding: 10rem 6rem;
+    overflow-x: visible;
+
+    @include respond(phone) {
+      padding: 8rem 6rem;
+    }
+
+    @include respond(smallPhone) {
+      padding: 8rem 3rem;
+    }
+  }
+
+  &__benefitsBackground {
+    position: absolute;
+    z-index: -1;
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: calc(100% + 3rem);
+    object-fit: cover;
+
+    @include respond(phone) {
+      width: 100%; // Solves a phone bug of 100vw being different from 100% of the viewport
+    }
+  }
+}
