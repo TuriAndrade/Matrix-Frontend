@@ -9,11 +9,8 @@
     )
     [r-main-end];
   grid-template-columns:
-    [c-sb-start] min-content [c-sb-end c-left-start] 1fr [c-left-end c-main-start] minmax(
-      auto,
-      144rem
-    )
-    [c-main-end c-right-start] 1fr [c-right-end];
+    [c-sb-start] min-content [c-sb-end c-main-start] 1fr
+    [c-main-end];
 
   &__navBar {
     grid-row: r-nb-start / r-nb-end;

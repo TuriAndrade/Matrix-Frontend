@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <>
+    <div className="homePage">
       <div className="homePage__main">
         <GirlStudying className="homePage__mainBackground homePage__mainBackground--default" />
         <GirlStudyingMobile className="homePage__mainBackground homePage__mainBackground--tabPort" />
@@ -26,6 +26,6 @@ export default function Home() {
           className="homePage__benefitsBackground"
         />
       </div>
-    </>
+    </div>
   );
 }

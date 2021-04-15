@@ -1,5 +1,11 @@
 .homePage {
+  display: grid;
+  grid-template-columns:
+    [c-left-start] 1fr [c-left-end c-content-start] minmax(auto, 114rem)
+    [c-content-end c-right-start] 1fr [c-right-end];
+
   &__main {
+    grid-column: c-content-start / c-content-end;
     position: relative;
     z-index: 10;
     padding: 10rem 6rem 42rem 6rem;
@@ -67,6 +73,8 @@
   }
 
   &__benefits {
+    margin-top: -3rem; //margin-top instead of top because top creates a gap below the element
+    grid-column: c-left-start / c-right-end;
     position: relative;
     z-index: 5;
     padding: 10rem 6rem;
@@ -84,15 +92,11 @@
   &__benefitsBackground {
     position: absolute;
     z-index: -1;
-    top: -3rem;
     left: 50%;
+    top: 0;
     transform: translateX(-50%);
-    width: 100vw;
-    height: calc(100% + 3rem);
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-
-    @include respond(phone) {
-      width: 100%; // Solves a phone bug of 100vw being different from 100% of the viewport
-    }
   }
 }
