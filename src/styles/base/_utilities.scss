@@ -5,3 +5,28 @@
 .uIconMedium {
   width: 2.5rem !important;
 }
+
+.uTextMedium {
+  font-weight: 500 !important;
+}
+
+.uTextStrong {
+  font-weight: 600 !important;
+}
+
+.uDisabledBtn {
+  &,
+  &:link,
+  &:visited,
+  &:active {
+    opacity: 0.4 !important;
+    pointer-events: none !important;
+  }
+
+  @include notTouchDevice() {
+    &:hover {
+      opacity: 0.4 !important;
+      pointer-events: none !important;
+    }
+  }
+}

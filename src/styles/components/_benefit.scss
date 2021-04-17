@@ -1,0 +1,30 @@
+.benefit {
+  display: grid;
+  grid-template-rows:
+    [r-img-start] 16rem [r-img-end r-heading-start]
+    min-content [r-heading-end r-paragraph-start] min-content [r-paragraph-end];
+  grid-template-columns: minmax(auto, 40rem);
+  justify-items: center;
+  justify-content: center;
+  padding: 6rem;
+  gap: 3.5rem;
+
+  @include respond(smallPhone) {
+    padding: 3rem;
+  }
+
+  &__img {
+    height: 100%;
+    max-width: 100%;
+    grid-row: r-img-start / r-img-end;
+  }
+
+  &__heading {
+    grid-row: r-heading-start / r-heading-end;
+  }
+
+  &__paragraph {
+    grid-row: r-paragraph-start / r-paragraph-end;
+    text-align: center;
+  }
+}
