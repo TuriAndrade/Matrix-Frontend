@@ -3,7 +3,7 @@
   grid-template-rows:
     [r-img-start] 16rem [r-img-end r-heading-start]
     min-content [r-heading-end r-paragraph-start] min-content [r-paragraph-end];
-  grid-template-columns: minmax(auto, 40rem);
+  grid-template-columns: minmax(20rem, 40rem);
   justify-items: center;
   justify-content: center;
   padding: 6rem;

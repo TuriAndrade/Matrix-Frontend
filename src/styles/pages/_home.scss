@@ -76,71 +76,30 @@
     margin-top: -3rem; //margin-top instead of top because top creates a gap below the element
     grid-column: c-left-start / c-right-end;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
     z-index: 5;
     padding: 13rem 0 10rem 0; //13rem = 10rem + 3rem compensates margin-top
-    display: grid;
-    grid-template-rows: [r-heading-start] min-content [r-heading-end r-main-start] min-content [r-main-end];
-    grid-template-columns: repeat(3, minmax(auto, 50rem));
-    justify-content: center;
-    overflow-x: hidden;
-    row-gap: 7rem;
-
-    @include respond(tabLand) {
-      justify-content: start;
-      grid-template-columns: repeat(3, 100%);
-    }
 
     @include respond(phone) {
       padding: 11rem 0 8rem 0; //11rem = 8rem + 3rem compensates margin-top
     }
   }
 
-  &__benefitsHeading {
-    justify-self: center;
-    grid-row: r-heading-start / r-heading-end;
-    grid-column: 1 / -1;
-    padding: 0 6rem;
+  &__benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 40rem));
+    justify-content: center;
+    row-gap: 7rem;
+  }
 
-    @include respond(tabLand) {
-      grid-column: 1 / 2;
-    }
+  &__benefitsHeading {
+    align-self: center;
+    padding: 0 6rem;
 
     @include respond(smallPhone) {
       padding: 0 3rem;
-    }
-  }
-
-  &__benefitsItem {
-    transition: transform 0.3s ease-out;
-
-    &--transform1 {
-      @include respond(tabLand) {
-        transform: translateX(0);
-      }
-    }
-
-    &--transform2 {
-      @include respond(tabLand) {
-        transform: translateX(-100%);
-      }
-    }
-
-    &--transform3 {
-      @include respond(tabLand) {
-        transform: translateX(-200%);
-      }
-    }
-
-    &--1 {
-      grid-column: 1 / 2;
-    }
-
-    &--2 {
-      grid-column: 2 / 3;
-    }
-
-    &--3 {
-      grid-column: 3 / 4;
     }
   }
 
@@ -152,49 +111,5 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  &__benefitsArrowBtn {
-    position: absolute;
-    z-index: 10;
-    grid-row: r-main-start / r-main-end;
-    width: 4rem;
-    top: 30%;
-    display: none;
-    background: none;
-
-    @include respond(tabLand) {
-      display: flex;
-    }
-
-    @include respond(smallPhone) {
-      width: 5rem;
-      top: auto;
-      bottom: -5rem;
-    }
-
-    &,
-    & * {
-      fill: $colorWhite;
-      opacity: 0.7;
-      transition: opacity 0.2s;
-    }
-
-    @include notTouchDevice() {
-      &:hover {
-        &,
-        & * {
-          opacity: 0.85;
-        }
-      }
-    }
-
-    &--left {
-      left: 2rem;
-    }
-
-    &--right {
-      right: 2rem;
-    }
   }
 }

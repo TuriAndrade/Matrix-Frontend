@@ -1,16 +1,11 @@
-import { useState } from "react";
 import GirlStudyingMobile from "../svgs/background/girlStudyingMobile";
 import GirlStudying from "../svgs/background/girlStudying";
 import Slides from "../svgs/background/slides";
 import GraduatingStudents from "../svgs/background/graduatingStudents";
 import ClockCalendar from "../svgs/background/clockCalendar";
-import CircleArrowRight from "../svgs/icons/circleArrowRight";
-import CircleArrowLeft from "../svgs/icons/circleArrowLeft";
 import Link from "next/link";
 
 export default function Home() {
-  const [benefitsSection, setBenefitsSection] = useState(1);
-
   return (
     <div className="homePage">
       <div className="homePage__main">
@@ -33,71 +28,45 @@ export default function Home() {
           alt="Background"
           className="homePage__benefitsBackground"
         />
-        <button
-          onClick={() =>
-            benefitsSection > 1 &&
-            setBenefitsSection((prevstate) => prevstate - 1)
-          }
-          className={`homePage__benefitsArrowBtn homePage__benefitsArrowBtn--left ${
-            benefitsSection === 1 && "uDisabledBtn"
-          }`}
-        >
-          <CircleArrowLeft />
-        </button>
-        <button
-          onClick={() =>
-            benefitsSection < 3 &&
-            setBenefitsSection((prevstate) => prevstate + 1)
-          }
-          className={`homePage__benefitsArrowBtn homePage__benefitsArrowBtn--right ${
-            benefitsSection === 3 && "uDisabledBtn"
-          }`}
-        >
-          <CircleArrowRight />
-        </button>
         <div className="homePage__benefitsHeading">
           <h1 className="h1 h1--white">Por que procuram o Matrix?</h1>
         </div>
-        <div
-          className={`benefit homePage__benefitsItem homePage__benefitsItem--1 homePage__benefitsItem--transform${benefitsSection}`}
-        >
-          <Slides className="benefit__img" />
-          <p className="p p--white p--strong benefit__heading">
-            Estude do seu jeito
-          </p>
-          <p className="p p--white benefit__paragraph">
-            Escolhe entre <span className="uTextStrong">slides</span>,{" "}
-            <span className="uTextStrong">videoaulas</span>,{" "}
-            <span className="uTextStrong">resumos</span>,{" "}
-            <span className="uTextStrong">exercícios</span>,{" "}
-            <span className="uTextStrong">correções de redação</span>,{" "}
-            <span className="uTextStrong">monitoria</span>, entre outros.
-          </p>
-        </div>
-        <div
-          className={`benefit homePage__benefitsItem homePage__benefitsItem--2 homePage__benefitsItem--transform${benefitsSection}`}
-        >
-          <GraduatingStudents className="benefit__img" />
-          <p className="p p--white p--strong benefit__heading">
-            De alunos para alunos
-          </p>
-          <p className="p p--white benefit__paragraph">
-            Contamos com mais de 20 tutores das diferentes áreas do
-            conhecimento, que são estudantes assim como você e conhecem bem as
-            dificuldades dessa fase.
-          </p>
-        </div>
-        <div
-          className={`benefit homePage__benefitsItem homePage__benefitsItem--3 homePage__benefitsItem--transform${benefitsSection}`}
-        >
-          <ClockCalendar className="benefit__img" />
-          <p className="p p--white p--strong benefit__heading">
-            Para todos os dias e horas
-          </p>
-          <p className="p p--white benefit__paragraph">
-            Estamos sempre a disposição para te orientar em seus estudos e tirar
-            eventuais dúvidas!
-          </p>
+        <div className="homePage__benefitsGrid">
+          <div className="benefit">
+            <Slides className="benefit__img" />
+            <p className="p p--white p--strong benefit__heading">
+              Estude do seu jeito
+            </p>
+            <p className="p p--white benefit__paragraph">
+              Escolhe entre <span className="uTextStrong">slides</span>,{" "}
+              <span className="uTextStrong">videoaulas</span>,{" "}
+              <span className="uTextStrong">resumos</span>,{" "}
+              <span className="uTextStrong">exercícios</span>,{" "}
+              <span className="uTextStrong">correções de redação</span>,{" "}
+              <span className="uTextStrong">monitoria</span>, entre outros.
+            </p>
+          </div>
+          <div className="benefit">
+            <GraduatingStudents className="benefit__img" />
+            <p className="p p--white p--strong benefit__heading">
+              De alunos para alunos
+            </p>
+            <p className="p p--white benefit__paragraph">
+              Contamos com mais de 20 tutores das diferentes áreas do
+              conhecimento, que são estudantes assim como você e conhecem bem as
+              dificuldades dessa fase.
+            </p>
+          </div>
+          <div className="benefit">
+            <ClockCalendar className="benefit__img" />
+            <p className="p p--white p--strong benefit__heading">
+              Para todos os dias e horas
+            </p>
+            <p className="p p--white benefit__paragraph">
+              Estamos sempre a disposição para te orientar em seus estudos e
+              tirar eventuais dúvidas!
+            </p>
+          </div>
         </div>
       </div>
     </div>
