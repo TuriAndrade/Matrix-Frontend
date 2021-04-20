@@ -39,6 +39,25 @@ textarea {
   }
 }
 
+.h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 110%;
+
+  @include respond(tabPort) {
+    font-size: 6rem;
+  }
+
+  &--black {
+    color: $colorBlack;
+  }
+
+  &--white {
+    color: $colorWhite;
+  }
+}
+
 .p {
   font-size: $defaultFontSize;
   font-weight: 400;
@@ -61,5 +80,9 @@ textarea {
 
   &--white {
     color: $colorWhite;
+  }
+
+  &--primary {
+    color: $colorPrimary;
   }
 }

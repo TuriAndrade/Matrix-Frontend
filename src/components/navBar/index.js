@@ -31,7 +31,7 @@ export default function NavBar() {
         ></button>
       </CSSTransition>
       <Link href="/">
-        <a className="navBar__logo">
+        <a onClick={() => setHiddenSideBarIn(false)} className="navBar__logo">
           <img src="/logo.webp" alt="Logo" />
           <p>Projeto Matrix</p>
         </a>

@@ -81,6 +81,7 @@
     gap: 7rem;
     z-index: 5;
     padding: 13rem 0 10rem 0; //13rem = 10rem + 3rem compensates margin-top
+    overflow: hidden;
 
     @include respond(phone) {
       padding: 11rem 0 8rem 0; //11rem = 8rem + 3rem compensates margin-top
@@ -111,5 +112,140 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  &__benefitsBackgroundSquares {
+    position: absolute;
+    z-index: -1;
+    bottom: -1rem;
+    right: 20%;
+    width: 6rem;
+
+    @include respond(phone) {
+      right: 10%;
+    }
+  }
+
+  &__resources {
+    margin-top: -2rem;
+    grid-column: c-content-start / c-content-end;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  &__resourcesGrid {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    overflow: auto;
+    padding: 0 2rem 2rem 2rem;
+
+    &--desktop {
+      display: flex;
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
+
+    &--phone {
+      display: none;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+
+      & > *:last-child {
+        &::after {
+          position: absolute;
+          content: "";
+          width: 2rem;
+          height: 100%;
+          top: 0;
+          right: -2rem;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      @include respond(phone) {
+        display: flex;
+      }
+    }
+  }
+
+  &__resourcesHeading {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: max-content 1fr;
+    gap: 4rem;
+    overflow: hidden;
+    justify-items: start;
+    align-items: start;
+
+    @include respond(phone) {
+      grid-template-rows: repeat(3, min-content);
+      grid-template-columns: 1fr;
+    }
+
+    &--desktop {
+      padding: 3rem;
+      display: grid;
+      width: 55rem;
+
+      @include respond(tabLand) {
+        width: 100%;
+      }
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
+
+    &--phone {
+      padding: 0 2rem 2rem 2rem;
+      display: none;
+      width: 100%;
+
+      @include respond(phone) {
+        display: grid;
+      }
+    }
+  }
+
+  &__resourcesText {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 45rem;
+
+    @include respond(tabPort) {
+      max-width: 50rem;
+    }
+  }
+
+  &__resourcesLink {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+
+  &__resourcesImg {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    position: relative;
+    width: 100%;
+    max-width: 50rem;
+    justify-self: right;
+
+    @include respond(phone) {
+      grid-row: 3 / 4;
+      grid-column: 1 / 2;
+    }
   }
 }
