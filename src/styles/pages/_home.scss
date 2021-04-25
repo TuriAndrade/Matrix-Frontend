@@ -104,16 +104,6 @@
     }
   }
 
-  &__benefitsBackground {
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
   &__benefitsBackgroundSquares {
     position: absolute;
     z-index: -1;
@@ -246,6 +236,116 @@
     @include respond(phone) {
       grid-row: 3 / 4;
       grid-column: 1 / 2;
+    }
+  }
+
+  &__stories {
+    margin-top: -10rem;
+    padding: 14rem 5rem 10rem 5rem;
+    grid-column: c-left-start / c-right-end;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    @include respond(phone) {
+      padding: 14rem 0 5rem 0;
+    }
+  }
+
+  &__storiesBackgroundBooks {
+    position: absolute;
+    z-index: -1;
+    width: 30rem;
+    bottom: 0;
+    right: 10%;
+
+    @include respond(phone) {
+      right: 1rem;
+      width: auto;
+      height: 11rem;
+    }
+
+    @include respond(smallPhone) {
+      right: 2rem;
+      height: 7rem;
+    }
+  }
+
+  &__storiesGrid {
+    justify-content: center;
+    align-self: center;
+    width: 120rem;
+    max-width: 100%;
+    display: grid;
+    gap: 2rem;
+    justify-items: right;
+    grid-template-columns: repeat(auto-fill, minmax(34rem, min-content));
+
+    @include respond(tabPort) {
+      grid-template-columns: repeat(auto-fill, minmax(31rem, min-content));
+    }
+
+    @include respond(phone) {
+      justify-content: start;
+      padding: 0 0 2rem 2rem;
+      grid-auto-flow: column;
+      overflow-x: auto;
+
+      & > *:last-child {
+        &::after {
+          position: absolute;
+          content: "";
+          width: 2rem;
+          height: 100%;
+          top: 0;
+          right: -2rem;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
+
+  &__storiesHeading {
+    align-self: end;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    &--desktop {
+      padding: 0 11rem 10rem 0;
+      width: 60rem;
+      display: flex;
+
+      @include respond(tabLand) {
+        width: 100%;
+        padding: 0 1rem 1rem 0;
+      }
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
+
+    &--phone {
+      padding: 2rem;
+      width: 42rem;
+      display: none;
+      @include respond(phone) {
+        display: flex;
+      }
+
+      @include respond(smallPhone) {
+        width: 42rem;
+      }
     }
   }
 }

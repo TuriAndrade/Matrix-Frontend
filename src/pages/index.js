@@ -5,6 +5,7 @@ import GraduatingStudents from "../svgs/background/graduatingStudents";
 import ClockCalendar from "../svgs/background/clockCalendar";
 import SmallSquares from "../svgs/background/smallSquares";
 import GuyPresenting from "../svgs/background/guyPresenting";
+import BooksAndPlant from "../svgs/background/booksAndPlant";
 import Essay from "../svgs/icons/essay";
 import File from "../svgs/icons/file";
 import Mail from "../svgs/icons/mail";
@@ -12,6 +13,8 @@ import Enem from "../svgs/icons/enem";
 import Class from "../svgs/icons/class";
 import Video from "../svgs/icons/video";
 import List from "../svgs/icons/list";
+import Profile from "../svgs/icons/profile";
+import Mortarboard from "../svgs/icons/mortarboard";
 import Link from "next/link";
 
 export default function Home() {
@@ -35,7 +38,8 @@ export default function Home() {
         <img
           src="/bgPattern.webp"
           alt="Background"
-          className="homePage__benefitsBackground"
+          className="backgroundImg"
+          loading="lazy"
         />
         <SmallSquares className="homePage__benefitsBackgroundSquares" />
         <div className="homePage__benefitsHeading">
@@ -297,6 +301,132 @@ export default function Home() {
             <a className="btnPrimary">Começar agora</a>
           </Link>
           <GuyPresenting className="homePage__resourcesImg" />
+        </div>
+      </div>
+      <div className="homePage__stories">
+        <img
+          src="/bgPattern2.webp"
+          alt="Background"
+          className="backgroundImg"
+          loading="lazy"
+        />
+        <BooksAndPlant className="homePage__storiesBackgroundBooks" />
+        <div className="homePage__storiesGrid">
+          <div className="homePage__storiesHeading homePage__storiesHeading--desktop">
+            <h1 className="h2 h2--black">O que dizem nossos alunos</h1>
+            <p className="p p--black p--medium">
+              Veja o que alguns dos nossos mais de 600 alunos estão achando da
+              sua experiência no Matrix.
+            </p>
+          </div>
+          <div className="story">
+            <Profile className="story__icon" />
+            <p className="story__heading">João Pedro do Santos</p>
+            <p className="story__text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Distinctio voluptatibus id quas ex consequuntur, beatae debitis!
+              Quis sapiente minima amet, placeat labore quam aut facere? Officia
+              corrupti accusamus quam dolor!
+            </p>
+            <p className="story__footer">
+              2º Ano Médio
+              <Mortarboard className="story__footer--icon" />
+            </p>
+          </div>
+          <div className="story">
+            <Profile className="story__icon" />
+            <p className="story__heading">João Pedro do Santos</p>
+            <p className="story__text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptatibus eveniet eligendi amet sapiente perspiciatis labore
+              itaque assumenda aspernatur consequatur et perferendis provident
+              architecto veritatis nemo at repellat illum, rem, aut rerum
+              doloribus corrupti enim aperiam. Voluptatem praesentium dicta
+              possimus labore.
+            </p>
+            <p className="story__footer">
+              2º Ano Médio
+              <Mortarboard className="story__footer--icon" />
+            </p>
+          </div>
+          <div className="story">
+            <Profile className="story__icon" />
+            <p className="story__heading">João Pedro do Santos</p>
+            <p className="story__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Dignissimos, rem adipisci expedita eveniet dolorem magnam
+              voluptates, ut dicta illo perspiciatis laboriosam, nulla commodi
+              quisquam? Adipisci eligendi rerum dignissimos? Repudiandae,
+              exercitationem.
+            </p>
+            <p className="story__footer">
+              2º Ano Médio
+              <Mortarboard className="story__footer--icon" />
+            </p>
+          </div>
+          <div className="story">
+            <Profile className="story__icon" />
+            <p className="story__heading">João Pedro do Santos</p>
+            <p className="story__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+              alias in doloremque esse sequi nihil est, aspernatur neque aliquid
+              placeat mollitia laudantium illo tenetur tempore possimus odit?
+              Illo, enim quis! Delectus quidem rerum ea aliquam accusantium
+              culpa dolorem non laudantium amet. Sint nam dolores doloremque!
+            </p>
+            <p className="story__footer">
+              2º Ano Médio
+              <Mortarboard className="story__footer--icon" />
+            </p>
+          </div>
+          <div className="story">
+            <Profile className="story__icon" />
+            <p className="story__heading">João Pedro do Santos</p>
+            <p className="story__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam
+              eligendi recusandae nam repellendus dolorum asperiores delectus
+              sit aut, alias, ullam ut ipsam totam minima reprehenderit quo
+              cumque laborum officiis ab.
+            </p>
+            <p className="story__footer">
+              2º Ano Médio
+              <Mortarboard className="story__footer--icon" />
+            </p>
+          </div>
+          <div className="story">
+            <Profile className="story__icon" />
+            <p className="story__heading">João Pedro do Santos</p>
+            <p className="story__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+              quod doloribus vel minima, dignissimos sunt architecto
+              consectetur, fugiat sed illo ullam pariatur dolore error ad.
+            </p>
+            <p className="story__footer">
+              2º Ano Médio
+              <Mortarboard className="story__footer--icon" />
+            </p>
+          </div>
+          <div className="story">
+            <Profile className="story__icon" />
+            <p className="story__heading">João Pedro do Santos</p>
+            <p className="story__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+              itaque molestias laboriosam amet laborum commodi sunt in
+              consequuntur porro aperiam repudiandae iste veritatis, accusamus
+              odit eligendi exercitationem velit.
+            </p>
+            <p className="story__footer">
+              2º Ano Médio
+              <Mortarboard className="story__footer--icon" />
+            </p>
+          </div>
+        </div>
+        <div className="homePage__storiesHeading homePage__storiesHeading--phone">
+          <h1 className="h2 h2--black">O que dizem nossos alunos</h1>
+          <p className="p p--black p--medium">
+            Veja o que alguns dos nossos mais de 600 alunos estão achando da sua
+            experiência no Matrix.
+          </p>
         </div>
       </div>
     </div>
