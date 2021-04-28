@@ -459,13 +459,9 @@
     }
   }
 
-  &__socialMediaImg {
-    width: 25rem;
+  &__socialMediaGirl {
+    width: 30rem;
     max-width: 100%;
-
-    @include respond(tabLand) {
-      display: none;
-    }
   }
 
   &__socialMediaSmartphones {
@@ -475,12 +471,7 @@
     height: 80rem;
 
     @include respond(tabLand) {
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 70rem;
-      max-width: 100%;
-      height: auto;
+      display: none;
     }
   }
 }

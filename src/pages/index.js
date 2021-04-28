@@ -474,7 +474,7 @@ export default function Home() {
               <Whatsapp />
             </a>
           </div>
-          <GirlAtDesk className="homePage__socialMediaImg" />
+          <GirlAtDesk className="homePage__socialMediaGirl" />
           <img
             src="/smartphones.webp"
             alt="smartphones"
