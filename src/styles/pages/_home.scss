@@ -86,6 +86,10 @@
     @include respond(phone) {
       padding: 11rem 0 8rem 0; //11rem = 8rem + 3rem compensates margin-top
     }
+
+    @include respond(smallPhone) {
+      padding: 6rem 0;
+    }
   }
 
   &__benefitsGrid {
@@ -346,6 +350,137 @@
       @include respond(smallPhone) {
         width: 42rem;
       }
+    }
+  }
+
+  &__socialMedia {
+    margin-top: -3rem;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    grid-column: c-left-start / c-right-end;
+    overflow: hidden;
+
+    @include respond(tabLand) {
+      margin-top: 0;
+    }
+  }
+
+  &__socialMediaBackgroundImg {
+    top: 3rem;
+
+    @include respond(tabLand) {
+      top: 0;
+    }
+  }
+
+  &__socialMediaGrid {
+    position: relative;
+    width: 130rem;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6rem;
+    padding: 13rem 6rem 10rem 6rem;
+
+    @include respond(tabLand) {
+      padding: 10rem 6rem;
+      align-items: center;
+    }
+
+    @include respond(phone) {
+      padding: 8rem 3rem;
+    }
+
+    @include respond(smallPhone) {
+      padding: 6rem 3rem;
+    }
+  }
+
+  &__socialMediaHeading {
+    &--desktop {
+      display: flex;
+      text-align: right;
+
+      @include respond(tabLand) {
+        display: none;
+      }
+    }
+
+    &--tabLand {
+      display: none;
+
+      @include respond(tabLand) {
+        display: flex;
+      }
+
+      @include respond(smallPhone) {
+        display: none;
+      }
+    }
+
+    &--smallPhone {
+      display: none;
+
+      @include respond(smallPhone) {
+        display: flex;
+      }
+    }
+  }
+
+  &__socialMediaIconsBox {
+    display: flex;
+    gap: 4rem;
+
+    @include respond(tabLand) {
+      gap: 7rem;
+    }
+
+    @include respond(smallPhone) {
+      gap: 4rem;
+    }
+  }
+
+  &__socialMediaIcon {
+    width: 6rem;
+    border-radius: 100rem;
+    overflow: hidden;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &,
+    & * {
+      fill: $colorWhite;
+    }
+  }
+
+  &__socialMediaImg {
+    width: 25rem;
+    max-width: 100%;
+
+    @include respond(tabLand) {
+      display: none;
+    }
+  }
+
+  &__socialMediaSmartphones {
+    position: absolute;
+    top: 0;
+    left: 4rem;
+    height: 80rem;
+
+    @include respond(tabLand) {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 70rem;
+      max-width: 100%;
+      height: auto;
     }
   }
 }

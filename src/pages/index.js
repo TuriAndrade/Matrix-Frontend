@@ -6,6 +6,7 @@ import ClockCalendar from "../svgs/background/clockCalendar";
 import SmallSquares from "../svgs/background/smallSquares";
 import GuyPresenting from "../svgs/background/guyPresenting";
 import BooksAndPlant from "../svgs/background/booksAndPlant";
+import GirlAtDesk from "../svgs/background/girlAtDesk";
 import Essay from "../svgs/icons/essay";
 import File from "../svgs/icons/file";
 import Mail from "../svgs/icons/mail";
@@ -15,6 +16,9 @@ import Video from "../svgs/icons/video";
 import List from "../svgs/icons/list";
 import Profile from "../svgs/icons/profile";
 import Mortarboard from "../svgs/icons/mortarboard";
+import Youtube from "../svgs/icons/youtube";
+import Instagram from "../svgs/icons/instagram";
+import Whatsapp from "../svgs/icons/whatsapp";
 import Link from "next/link";
 
 export default function Home() {
@@ -427,6 +431,55 @@ export default function Home() {
             Veja o que alguns dos nossos mais de 600 alunos estão achando da sua
             experiência no Matrix.
           </p>
+        </div>
+      </div>
+      <div className="homePage__socialMedia">
+        <img
+          src="/bgPattern.webp"
+          alt="Background"
+          className="backgroundImg homePage__socialMediaBackgroundImg"
+          loading="lazy"
+        />
+        <div className="homePage__socialMediaGrid">
+          <div className="homePage__socialMediaHeading homePage__socialMediaHeading--desktop">
+            <h1 className="h1 h1--white">
+              Fica ligado<br></br>nas nossas redes
+            </h1>
+          </div>
+          <div className="homePage__socialMediaHeading homePage__socialMediaHeading--tabLand">
+            <h1 className="h1 h1--white">Fica ligado nas nossas redes</h1>
+          </div>
+          <div className="homePage__socialMediaHeading homePage__socialMediaHeading--smallPhone">
+            <h1 className="h1 h1--white">
+              Fica ligado<br></br>nos nossos
+            </h1>
+          </div>
+          <div className="homePage__socialMediaIconsBox">
+            <a
+              href="https://www.youtube.com/"
+              className="homePage__socialMediaIcon"
+            >
+              <Youtube />
+            </a>
+            <a
+              href="https://www.instagram.com/"
+              className="homePage__socialMediaIcon"
+            >
+              <Instagram />
+            </a>
+            <a
+              href="https://www.whatsapp.com/"
+              className="homePage__socialMediaIcon"
+            >
+              <Whatsapp />
+            </a>
+          </div>
+          <GirlAtDesk className="homePage__socialMediaImg" />
+          <img
+            src="/smartphones.webp"
+            alt="smartphones"
+            className="homePage__socialMediaSmartphones"
+          />
         </div>
       </div>
     </div>
