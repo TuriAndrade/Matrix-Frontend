@@ -192,3 +192,35 @@
     }
   }
 }
+
+.socialMediaIcon {
+  border-radius: 100rem;
+  overflow: hidden;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &--big {
+    width: 6rem;
+  }
+
+  &--medium {
+    width: 4rem;
+  }
+
+  &--white {
+    &,
+    & * {
+      fill: $colorWhite;
+    }
+  }
+
+  &--primaryLight {
+    &,
+    & * {
+      fill: $colorPrimaryLight;
+    }
+  }
+}

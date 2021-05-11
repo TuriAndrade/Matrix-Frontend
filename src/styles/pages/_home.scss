@@ -443,22 +443,6 @@
     }
   }
 
-  &__socialMediaIcon {
-    width: 6rem;
-    border-radius: 100rem;
-    overflow: hidden;
-
-    svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    &,
-    & * {
-      fill: $colorWhite;
-    }
-  }
-
   &__socialMediaGirl {
     width: 30rem;
     max-width: 100%;
@@ -473,5 +457,96 @@
     @include respond(tabLand) {
       display: none;
     }
+  }
+
+  &__members {
+    position: relative;
+    grid-column: c-left-start / c-right-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+    padding: 10rem 0;
+    overflow: hidden;
+
+    @include respond(phone) {
+      padding: 8rem 0;
+      gap: 8rem;
+    }
+
+    @include respond(smallPhone) {
+      padding: 6rem 0;
+      gap: 6rem;
+    }
+  }
+
+  &__membersHeading {
+    padding: 0 6rem;
+
+    @include respond(phone) {
+      padding: 0 3rem;
+    }
+
+    &--desktop {
+      display: flex;
+
+      @include respond(smallPhone) {
+        display: none;
+      }
+    }
+
+    &--smallPhone {
+      display: none;
+
+      @include respond(smallPhone) {
+        display: flex;
+      }
+    }
+  }
+
+  &__membersGrid {
+    width: 114rem;
+    max-width: 100%;
+    display: grid;
+    justify-content: center;
+    gap: 5rem;
+    padding: 0 6rem 2rem 6rem;
+    grid-template-columns: repeat(auto-fit, 40rem);
+
+    @include respond(phone) {
+      padding: 0 3rem 2rem 3rem;
+      gap: 3rem;
+      grid-auto-columns: 40rem;
+      grid-auto-flow: column;
+      overflow-x: auto;
+      justify-content: start;
+
+      & > *:last-child {
+        &::after {
+          position: absolute;
+          content: "";
+          width: 3rem;
+          height: 100%;
+          top: 0;
+          right: -3rem;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
+
+  &__membersBackground {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 6rem;
+    width: 100%;
+    min-width: 50rem;
   }
 }

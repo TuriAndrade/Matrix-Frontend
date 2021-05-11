@@ -7,6 +7,7 @@ import SmallSquares from "../svgs/background/smallSquares";
 import GuyPresenting from "../svgs/background/guyPresenting";
 import BooksAndPlant from "../svgs/background/booksAndPlant";
 import GirlAtDesk from "../svgs/background/girlAtDesk";
+import CurveAndPlant from "../svgs/background/curveAndPlant";
 import Essay from "../svgs/icons/essay";
 import File from "../svgs/icons/file";
 import Mail from "../svgs/icons/mail";
@@ -20,6 +21,7 @@ import Youtube from "../svgs/icons/youtube";
 import Instagram from "../svgs/icons/instagram";
 import Whatsapp from "../svgs/icons/whatsapp";
 import Link from "next/link";
+import MemberCard from "../components/memberCard";
 
 export default function Home() {
   return (
@@ -457,19 +459,19 @@ export default function Home() {
           <div className="homePage__socialMediaIconsBox">
             <a
               href="https://www.youtube.com/"
-              className="homePage__socialMediaIcon"
+              className="socialMediaIcon socialMediaIcon--big socialMediaIcon--white"
             >
               <Youtube />
             </a>
             <a
               href="https://www.instagram.com/"
-              className="homePage__socialMediaIcon"
+              className="socialMediaIcon socialMediaIcon--big socialMediaIcon--white"
             >
               <Instagram />
             </a>
             <a
               href="https://www.whatsapp.com/"
-              className="homePage__socialMediaIcon"
+              className="socialMediaIcon socialMediaIcon--big socialMediaIcon--white"
             >
               <Whatsapp />
             </a>
@@ -479,6 +481,92 @@ export default function Home() {
             src="/smartphones.webp"
             alt="smartphones"
             className="homePage__socialMediaSmartphones"
+          />
+        </div>
+      </div>
+      <div className="homePage__members">
+        <CurveAndPlant className="homePage__membersBackground" />
+        <h1 className="h1 h1--black homePage__membersHeading homePage__membersHeading--desktop">
+          Quem torna isso possível
+        </h1>
+        <h1 className="h1 h1--black homePage__membersHeading homePage__membersHeading--smallPhone">
+          Quem torna<br></br>isso possível
+        </h1>
+        <div className="homePage__membersGrid">
+          <MemberCard
+            picture="/defaultProfilePicture.webp"
+            alt="defaultProfilePicture"
+            name="Clara Bastos"
+            title="Diretora Executiva"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            doloremque nisi dignissimos expedita perferendis tempora officiis
+            dolore! Sed repellat harum, tenetur a odit autem praesentium, vero
+            nesciunt dignissimos ipsa impedit quam placeat perspiciatis dolorum non
+            quasi natus debitis, est assumenda necessitatibus cum! Eaque et corporis
+            nisi similique rerum odit iusto!"
+            youtube="https://youtube.com"
+            instagram="https://instagram.com"
+            whatsapp="https://whatsapp.com"
+          />
+          <MemberCard
+            picture="/defaultProfilePicture.webp"
+            alt="defaultProfilePicture"
+            name="Clara Bastos"
+            title="Diretora Executiva"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            doloremque nisi dignissimos expedita perferendis tempora officiis
+            dolore! Sed repellat harum, tenetur a odit autem praesentium, vero
+            nesciunt dignissimos ipsa impedit quam placeat perspiciatis dolorum non
+            quasi natus debitis, est assumenda necessitatibus cum! Eaque et corporis
+            nisi similique rerum odit iusto!"
+            youtube="https://youtube.com"
+            instagram="https://instagram.com"
+            whatsapp="https://whatsapp.com"
+          />
+          <MemberCard
+            picture="/defaultProfilePicture.webp"
+            alt="defaultProfilePicture"
+            name="Clara Bastos"
+            title="Diretora Executiva"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            doloremque nisi dignissimos expedita perferendis tempora officiis
+            dolore! Sed repellat harum, tenetur a odit autem praesentium, vero
+            nesciunt dignissimos ipsa impedit quam placeat perspiciatis dolorum non
+            quasi natus debitis, est assumenda necessitatibus cum! Eaque et corporis
+            nisi similique rerum odit iusto!"
+            youtube="https://youtube.com"
+            instagram="https://instagram.com"
+            whatsapp="https://whatsapp.com"
+          />
+          <MemberCard
+            picture="/defaultProfilePicture.webp"
+            alt="defaultProfilePicture"
+            name="Clara Bastos"
+            title="Diretora Executiva"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            doloremque nisi dignissimos expedita perferendis tempora officiis
+            dolore! Sed repellat harum, tenetur a odit autem praesentium, vero
+            nesciunt dignissimos ipsa impedit quam placeat perspiciatis dolorum non
+            quasi natus debitis, est assumenda necessitatibus cum! Eaque et corporis
+            nisi similique rerum odit iusto!"
+            youtube="https://youtube.com"
+            instagram="https://instagram.com"
+            whatsapp="https://whatsapp.com"
+          />
+          <MemberCard
+            picture="/defaultProfilePicture.webp"
+            alt="defaultProfilePicture"
+            name="Clara Bastos"
+            title="Diretora Executiva"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            doloremque nisi dignissimos expedita perferendis tempora officiis
+            dolore! Sed repellat harum, tenetur a odit autem praesentium, vero
+            nesciunt dignissimos ipsa impedit quam placeat perspiciatis dolorum non
+            quasi natus debitis, est assumenda necessitatibus cum! Eaque et corporis
+            nisi similique rerum odit iusto!"
+            youtube="https://youtube.com"
+            instagram="https://instagram.com"
+            whatsapp="https://whatsapp.com"
           />
         </div>
       </div>

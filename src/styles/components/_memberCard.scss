@@ -1,0 +1,64 @@
+.memberCard {
+  display: grid;
+  position: relative;
+  grid-template-rows: repeat(5, min-content);
+  grid-template-columns: [c-left-start] 3rem [c-left-end c-content-start] 1fr [c-content-end c-right-start] 3rem [c-right-end];
+  row-gap: 2.5rem;
+  width: 40rem;
+  max-width: 100%;
+  background-color: $colorWhite;
+  box-shadow: 0.6rem 0.6rem 3px rgba($colorBlack, 0.15);
+  border-radius: 0.7rem;
+  transition: all 0.2s;
+  padding-bottom: 3rem;
+
+  @include notTouchDevice() {
+    &:hover {
+      box-shadow: 0.45rem 0.45rem 3px rgba($colorBlack, 0.15);
+      transform: translateY(0.5rem);
+    }
+  }
+
+  &__picture {
+    grid-column: c-left-start / c-right-end;
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__name {
+    grid-column: c-content-start / c-content-end;
+    font-weight: 500;
+    font-size: 4.8rem;
+    color: $colorBlack;
+    line-height: 100%;
+  }
+
+  &__title {
+    grid-column: c-content-start / c-content-end;
+    font-weight: 500;
+    font-size: 2.8rem;
+    color: $colorBlack;
+    line-height: 100%;
+  }
+
+  &__description {
+    grid-column: c-content-start / c-content-end;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: $colorBlack;
+
+    @include respond(phone) {
+      font-weight: 500;
+    }
+  }
+
+  &__links {
+    grid-column: c-content-start / c-content-end;
+    display: flex;
+    gap: 3rem;
+  }
+}
