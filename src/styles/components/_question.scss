@@ -1,0 +1,73 @@
+.question {
+  background-color: $colorWhite;
+  box-shadow: 0.5rem 0.5rem 3px rgba($colorBlack, 0.15);
+  border-radius: 3px;
+  padding: 1.3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  @include notTouchDevice() {
+    &:hover {
+      box-shadow: 0.4rem 0.4rem 3px rgba($colorBlack, 0.15);
+      transform: translateY(0.5rem);
+    }
+  }
+
+  &__heading {
+    font-size: 3.3rem;
+    font-weight: 600;
+    color: $colorBlack;
+  }
+
+  &__answer {
+    position: relative;
+    overflow: hidden;
+    font-size: $defaultFontSize;
+    font-weight: 500;
+    color: $colorBlack;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    /*
+      It's impossible to transition height from 0 to 100% or auto, so I set height to 100% and 
+      set the transition to max-height, from 0 to a value greater than the auto height.
+    */
+
+    &::before {
+      content: "";
+      position: relative;
+      height: 1rem;
+      width: 100%;
+    }
+
+    &-enter {
+      opacity: 0;
+      visibility: hidden;
+      max-height: 0;
+    }
+
+    &-enter-active {
+      opacity: 1;
+      visibility: visible;
+      max-height: 100rem;
+      transition: max-height 0.8s, opacity 0.4s 0.2s, visibility 0.4s 0.2s;
+    }
+
+    &-enter-done,
+    &-exit {
+      opacity: 1;
+      visibility: visible;
+      max-height: 100rem;
+    }
+
+    &-exit-active {
+      opacity: 0;
+      visibility: hidden;
+      max-height: 0;
+      transition: max-height 0.5s, opacity 0.5s, visibility 0.5s;
+    }
+  }
+}

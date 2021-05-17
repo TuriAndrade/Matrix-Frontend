@@ -549,4 +549,52 @@
     width: 100%;
     min-width: 50rem;
   }
+
+  &__questions {
+    position: relative;
+    grid-column: c-content-start / c-content-end;
+    padding: 10rem 6rem;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: 1fr;
+    gap: 6rem;
+
+    @include respond(tabPort) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, min-content);
+      gap: 10rem;
+    }
+
+    @include respond(phone) {
+      padding: 8rem 3rem;
+      gap: 8rem;
+    }
+
+    @include respond(smallPhone) {
+      padding: 6rem 3rem;
+      gap: 6rem;
+    }
+  }
+
+  &__questionsHeading {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    max-width: 100%;
+    gap: 2rem;
+
+    @include respond(tabPort) {
+      width: 60rem;
+    }
+
+    @include respond(phone) {
+      width: 40rem;
+    }
+  }
+
+  &__questionsContent {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
 }

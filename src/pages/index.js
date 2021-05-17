@@ -22,6 +22,7 @@ import Instagram from "../svgs/icons/instagram";
 import Whatsapp from "../svgs/icons/whatsapp";
 import Link from "next/link";
 import MemberCard from "../components/memberCard";
+import Question from "../components/question";
 
 export default function Home() {
   return (
@@ -567,6 +568,52 @@ export default function Home() {
             youtube="https://youtube.com"
             instagram="https://instagram.com"
             whatsapp="https://whatsapp.com"
+          />
+        </div>
+      </div>
+      <div className="homePage__questions">
+        <div className="homePage__questionsHeading">
+          <h1 className="h1 h1--black">Perguntas Frequentes</h1>
+          <p className="p p--black p--medium">
+            Aqui você acha a resposta para a maioria das perguntas. Qualquer
+            coisa entra em contato com a gente pelo Instagram ou Whatsapp.
+          </p>
+        </div>
+        <div className="homePage__questionsContent">
+          <Question
+            heading="Tem que pagar?"
+            answer="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae
+              explicabo ipsum nostrum optio est maiores ullam, sit pariatur
+              consequatur, ducimus excepturi at tenetur aliquid corrupti maxime
+              iusto inventore accusamus autem."
+          />
+          <Question
+            heading="É obrigatório entrar nas salas?"
+            answer="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae
+              explicabo ipsum nostrum optio est maiores ullam, sit pariatur
+              consequatur, ducimus excepturi at tenetur aliquid corrupti maxime
+              iusto inventore accusamus autem."
+          />
+          <Question
+            heading="Onde posso tirar as dúvidas?"
+            answer="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae
+              explicabo ipsum nostrum optio est maiores ullam, sit pariatur
+              consequatur, ducimus excepturi at tenetur aliquid corrupti maxime
+              iusto inventore accusamus autem."
+          />
+          <Question
+            heading="Não consigo entrar nas salas!"
+            answer="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae
+              explicabo ipsum nostrum optio est maiores ullam, sit pariatur
+              consequatur, ducimus excepturi at tenetur aliquid corrupti maxime
+              iusto inventore accusamus autem."
+          />
+          <Question
+            heading="Quantas redações posso mandar?"
+            answer="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae
+              explicabo ipsum nostrum optio est maiores ullam, sit pariatur
+              consequatur, ducimus excepturi at tenetur aliquid corrupti maxime
+              iusto inventore accusamus autem."
           />
         </div>
       </div>
