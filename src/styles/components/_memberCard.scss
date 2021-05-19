@@ -47,13 +47,9 @@
 
   &__description {
     grid-column: c-content-start / c-content-end;
-    font-weight: 400;
-    font-size: 1.5rem;
+    font-weight: 500;
+    font-size: $defaultFontSize;
     color: $colorBlack;
-
-    @include respond(phone) {
-      font-weight: 500;
-    }
   }
 
   &__links {

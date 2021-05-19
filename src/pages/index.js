@@ -8,6 +8,7 @@ import GuyPresenting from "../svgs/background/guyPresenting";
 import BooksAndPlant from "../svgs/background/booksAndPlant";
 import GirlAtDesk from "../svgs/background/girlAtDesk";
 import CurveAndPlant from "../svgs/background/curveAndPlant";
+import SmallCurve from "../svgs/background/smallCurve";
 import Essay from "../svgs/icons/essay";
 import File from "../svgs/icons/file";
 import Mail from "../svgs/icons/mail";
@@ -615,6 +616,38 @@ export default function Home() {
               consequatur, ducimus excepturi at tenetur aliquid corrupti maxime
               iusto inventore accusamus autem."
           />
+        </div>
+      </div>
+      <div className="homePage__footer footer">
+        <img
+          src="/bgPattern.webp"
+          alt="Background"
+          className="backgroundImg"
+          loading="lazy"
+        />
+        <SmallCurve className="footer__backgroundDetail" />
+        <p className="p--white p--medium">
+          Copyright &copy; 2021 Projeto Matrix
+        </p>
+        <div className="footer__linkBox">
+          <a
+            href="https://www.youtube.com/"
+            className="socialMediaIcon socialMediaIcon--medium socialMediaIcon--white"
+          >
+            <Youtube />
+          </a>
+          <a
+            href="https://www.instagram.com/"
+            className="socialMediaIcon socialMediaIcon--medium socialMediaIcon--white"
+          >
+            <Instagram />
+          </a>
+          <a
+            href="https://www.whatsapp.com/"
+            className="socialMediaIcon socialMediaIcon--medium socialMediaIcon--white"
+          >
+            <Whatsapp />
+          </a>
         </div>
       </div>
     </div>

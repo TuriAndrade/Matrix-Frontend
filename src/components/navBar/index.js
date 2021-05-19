@@ -14,9 +14,8 @@ import { HiddenSideBarContext } from "../context/hiddenSideBar";
 export default function NavBar() {
   const [dropdownIn, setDropdownIn] = useState(false);
 
-  const { hiddenSideBarIn, setHiddenSideBarIn } = useContext(
-    HiddenSideBarContext
-  );
+  const { hiddenSideBarIn, setHiddenSideBarIn } =
+    useContext(HiddenSideBarContext);
 
   return (
     <div className="navBar">

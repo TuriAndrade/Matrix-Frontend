@@ -1,0 +1,22 @@
+.footer {
+  position: relative;
+  padding: 3rem;
+  gap: 3rem;
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: minmax(min-content, max-content);
+  justify-content: center;
+
+  &__backgroundDetail {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    width: 12rem;
+  }
+
+  &__linkBox {
+    display: flex;
+    justify-content: space-between;
+  }
+}

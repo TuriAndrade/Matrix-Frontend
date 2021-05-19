@@ -597,4 +597,8 @@
     flex-direction: column;
     gap: 3rem;
   }
+
+  &__footer {
+    grid-column: c-left-start / c-right-end;
+  }
 }
