@@ -55,9 +55,9 @@
 
     p {
       color: $colorPrimary;
-      font-size: 1.5rem;
-      letter-spacing: 1px;
+      font-size: $defaultFontSize;
       font-weight: 600;
+      text-transform: lowercase;
       transition: color 0.2s;
 
       @include respond(tabPort) {
@@ -115,14 +115,10 @@
     width: 0.8rem;
     justify-self: end;
     transition: all 0.2s;
+    color: $colorWhite;
 
     @include respond(tabPort) {
       display: none;
-    }
-
-    &,
-    & * {
-      fill: $colorWhite;
     }
   }
 
@@ -141,10 +137,7 @@
 
   @include notTouchDevice() {
     &__item:hover &__itemIcon {
-      &,
-      & * {
-        fill: $colorWhite;
-      }
+      color: $colorWhite;
     }
   }
 
@@ -154,35 +147,24 @@
   }
 
   &__itemIcon {
-    width: 2.3rem;
-    max-width: 100%;
-
-    &,
-    & * {
-      fill: $colorPrimary;
-      transition: fill 0.1s;
-    }
+    font-size: 2rem;
+    color: $colorPrimary;
+    transition: all 0.2s;
 
     @include respond(tabPort) {
-      width: 2.5rem;
+      font-size: 2.3rem;
     }
   }
 
   &__item-enter-active &__itemIcon,
   &__item-enter-done &__itemIcon,
   &__item-exit &__itemIcon {
-    &,
-    & * {
-      fill: $colorWhite;
-    }
+    color: $colorWhite;
   }
 
   &__item-appear-active &__itemIcon {
-    &,
-    & * {
-      fill: $colorWhite;
-      transition: none !important;
-    }
+    color: $colorWhite;
+    transition: none !important;
   }
 
   &--closed &__item {

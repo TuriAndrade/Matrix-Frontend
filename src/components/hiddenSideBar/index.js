@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import ArrowLeft from "../../svgs/icons/arrowLeft";
 import Essay from "../../svgs/icons/essay";
 import File from "../../svgs/icons/file";
-import Mail from "../../svgs/icons/mail";
+import UnB from "../../svgs/icons/UnB";
 import Enem from "../../svgs/icons/enem";
 import Class from "../../svgs/icons/class";
 import Video from "../../svgs/icons/video";
@@ -13,9 +13,8 @@ import { HiddenSideBarContext } from "../context/hiddenSideBar";
 import { CSSTransition } from "react-transition-group";
 
 export default function HiddenSideBar() {
-  const { hiddenSideBarIn, setHiddenSideBarIn } = useContext(
-    HiddenSideBarContext
-  );
+  const { hiddenSideBarIn, setHiddenSideBarIn } =
+    useContext(HiddenSideBarContext);
 
   const router = useRouter();
 
@@ -118,7 +117,7 @@ export default function HiddenSideBar() {
                   className="hiddenSideBar__item"
                 >
                   <div className="hiddenSideBar__itemIconBox">
-                    <Mail className="hiddenSideBar__itemIcon" />
+                    <UnB className="hiddenSideBar__itemIcon" />
                   </div>
                   <p>Estude para a UnB</p>
                   <ArrowLeft className="hiddenSideBar__itemIndicator" />

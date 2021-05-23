@@ -2,7 +2,7 @@ import React from "react";
 import ArrowLeft from "../../svgs/icons/arrowLeft";
 import Essay from "../../svgs/icons/essay";
 import File from "../../svgs/icons/file";
-import Mail from "../../svgs/icons/mail";
+import UnB from "../../svgs/icons/UnB";
 import Enem from "../../svgs/icons/enem";
 import Class from "../../svgs/icons/class";
 import Video from "../../svgs/icons/video";
@@ -65,7 +65,7 @@ export default function SideBar() {
         <Link href="/UnB">
           <a className="sideBar__item">
             <div className="sideBar__itemIconBox">
-              <Mail className="sideBar__itemIcon" />
+              <UnB className="sideBar__itemIcon" />
             </div>
             <p>Estude para a UnB</p>
             <ArrowLeft className="sideBar__itemIndicator" />

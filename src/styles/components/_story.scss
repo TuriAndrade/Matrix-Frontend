@@ -29,12 +29,8 @@
   &__icon {
     grid-row: 1 / -1;
     grid-column: 1 / 2;
-    width: 4rem;
-
-    &,
-    & * {
-      fill: $colorBlack;
-    }
+    font-size: 4rem;
+    color: $colorBlack;
   }
 
   &__heading {
@@ -75,12 +71,8 @@
 
     &--icon {
       display: inline-block;
-      width: 2rem;
-
-      &,
-      & * {
-        fill: $colorBlack;
-      }
+      font-size: 2rem;
+      color: $colorBlack;
     }
   }
 }

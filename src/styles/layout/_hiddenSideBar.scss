@@ -13,10 +13,10 @@
     &:link,
     &:visited,
     &:active {
-      color: $colorBlack;
+      color: $colorPrimaryLight;
       text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 300;
+      text-transform: lowercase;
+      font-weight: 600;
       font-size: 2.8rem;
       display: inline-flex;
       padding: 1rem;
@@ -42,7 +42,7 @@
     p {
       color: $colorPrimary;
       font-size: 2rem;
-      letter-spacing: 1px;
+      text-transform: lowercase;
       font-weight: 600;
       transition: color 0.2s;
     }
@@ -86,11 +86,7 @@
     width: 1rem;
     justify-self: end;
     transition: all 0.2s;
-
-    &,
-    & * {
-      fill: $colorWhite;
-    }
+    color: $colorWhite;
   }
 
   &__item-enter-active &__itemIndicator,
@@ -112,31 +108,24 @@
   }
 
   &__itemIcon {
-    width: 2.5rem;
-    max-width: 100%;
+    font-size: 2rem;
+    color: $colorPrimary;
+    transition: all 0.2s;
 
-    &,
-    & * {
-      fill: $colorPrimary;
-      transition: fill 0.1s;
+    @include respond(tabPort) {
+      font-size: 2.3rem;
     }
   }
 
   &__item-enter-active &__itemIcon,
   &__item-enter-done &__itemIcon,
   &__item-exit &__itemIcon {
-    &,
-    & * {
-      fill: $colorWhite;
-    }
+    color: $colorWhite;
   }
 
   &__item-appear-active &__itemIcon {
-    &,
-    & * {
-      fill: $colorWhite;
-      transition: none !important;
-    }
+    color: $colorWhite;
+    transition: none !important;
   }
 
   &__closeArea {

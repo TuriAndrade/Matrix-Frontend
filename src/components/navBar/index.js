@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import ArrowDown from "../../svgs/icons/arrowDown";
 import Essay from "../../svgs/icons/essay";
 import File from "../../svgs/icons/file";
-import Mail from "../../svgs/icons/mail";
+import UnB from "../../svgs/icons/UnB";
 import Enem from "../../svgs/icons/enem";
 import Class from "../../svgs/icons/class";
 import Video from "../../svgs/icons/video";
@@ -64,7 +64,7 @@ export default function NavBar() {
               </Link>
               <Link href="/UnB">
                 <a className="dropdown__item">
-                  <Mail className="dropdown__item--icon" />
+                  <UnB className="dropdown__item--icon" />
                   <p>Estude para a UnB</p>
                 </a>
               </Link>

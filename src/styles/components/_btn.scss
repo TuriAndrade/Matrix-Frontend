@@ -8,12 +8,12 @@
     text-decoration: none;
     color: $colorWhite;
     font-size: $defaultFontSize;
-    letter-spacing: 1.5px;
     font-weight: 600;
     border-radius: 3px;
     padding: 0.8rem;
     line-height: 100%;
     transition: all 0.2s;
+    text-transform: lowercase;
   }
 
   @include notTouchDevice() {
@@ -41,7 +41,7 @@
   p {
     font-weight: 600;
     font-size: $defaultFontSize;
-    letter-spacing: 1.5px;
+    text-transform: lowercase;
     line-height: 100%;
   }
 
@@ -50,99 +50,19 @@
   }
 
   &--black {
-    p {
-      color: $colorBlack;
-    }
-  }
-
-  &--black &--icon {
-    &,
-    & * {
-      fill: $colorBlack;
-    }
+    color: $colorBlack;
   }
 
   &--white {
-    p {
-      color: $colorWhite;
-    }
-  }
-
-  &--white &--icon {
-    &,
-    & * {
-      fill: $colorWhite;
-    }
+    color: $colorWhite;
   }
 
   &--primary {
-    p {
-      color: $colorPrimary;
-    }
-  }
-
-  &--primary &--icon {
-    &,
-    & * {
-      fill: $colorPrimary;
-    }
+    color: $colorPrimary;
   }
 
   &--primaryLight {
-    p {
-      color: $colorPrimaryLight;
-    }
-  }
-
-  &--primaryLight &--icon {
-    &,
-    & * {
-      fill: $colorPrimaryLight;
-    }
-  }
-}
-
-.btnBackground {
-  &,
-  &:link,
-  &:visited,
-  &:active {
-    text-decoration: none;
-    color: $colorBlack;
-    background: transparent;
-    display: inline-flex;
-    padding: 0.8rem;
-    background-image: linear-gradient(
-      120deg,
-      transparent 0 50%,
-      $colorPrimary 50%
-    );
-    background-size: 250%;
-    background-position: 0%;
-    transition: background-position 0.3s ease-out, color 0.4s,
-      transform 0.2s ease-out;
-  }
-
-  p {
-    text-align: left;
-    font-weight: 300;
-    text-transform: uppercase;
-    font-size: 3rem;
-    letter-spacing: 1.5px;
-    line-height: 100%;
-
-    @include respond(phone) {
-      font-size: 2.5rem;
-      letter-spacing: normal;
-    }
-  }
-
-  @include notTouchDevice() {
-    &:hover {
-      background-position: 100%;
-      transform: translateX(1rem);
-      color: $colorWhite;
-    }
+    color: $colorPrimaryLight;
   }
 }
 
@@ -164,32 +84,20 @@
     }
   }
 
-  &--primary &--icon {
-    &,
-    & * {
-      fill: $colorPrimary;
-    }
+  &--primary {
+    color: $colorPrimary;
   }
 
-  &--primaryLight &--icon {
-    &,
-    & * {
-      fill: $colorPrimaryLight;
-    }
+  &--primaryLight {
+    color: $colorPrimaryLight;
   }
 
-  &--black &--icon {
-    &,
-    & * {
-      fill: $colorBlack;
-    }
+  &--black {
+    color: $colorBlack;
   }
 
-  &--white &--icon {
-    &,
-    & * {
-      fill: $colorWhite;
-    }
+  &--white {
+    color: $colorWhite;
   }
 }
 
@@ -211,16 +119,45 @@
   }
 
   &--white {
-    &,
-    & * {
-      fill: $colorWhite;
-    }
+    color: $colorWhite;
   }
 
   &--primaryLight {
-    &,
-    & * {
-      fill: $colorPrimaryLight;
+    color: $colorPrimaryLight;
+  }
+}
+
+.enemBtn {
+  position: relative;
+  border: 2px solid currentColor;
+  color: $colorPrimary;
+  border-radius: 100rem;
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+
+  @include respond(tabPort) {
+    width: 1em;
+    height: 1em;
+  }
+
+  &::after {
+    content: "e";
+    font-size: 0.8em;
+    font-weight: 600;
+    color: currentColor;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tabPort) {
+      font-size: 0.9em;
     }
   }
 }

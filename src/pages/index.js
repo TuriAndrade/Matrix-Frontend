@@ -11,7 +11,7 @@ import CurveAndPlant from "../svgs/background/curveAndPlant";
 import SmallCurve from "../svgs/background/smallCurve";
 import Essay from "../svgs/icons/essay";
 import File from "../svgs/icons/file";
-import Mail from "../svgs/icons/mail";
+import UnB from "../svgs/icons/UnB";
 import Enem from "../svgs/icons/enem";
 import Class from "../svgs/icons/class";
 import Video from "../svgs/icons/video";
@@ -122,7 +122,7 @@ export default function Home() {
           </Link>
           <Link href="/UnB">
             <a className="resource">
-              <Mail className="resource__icon" />
+              <UnB className="resource__icon" />
               <p className="resource__heading">
                 Estude para<br></br>
                 <span className="uTextStrong">Pas-UnB</span>
@@ -195,7 +195,7 @@ export default function Home() {
               <span className="uHighlight uHighlight--primaryLight">vaga</span>
             </h1>
             <Link href="/register">
-              <a className="btnPrimary">Começar agora</a>
+              <a className="btnPrimary">Comece agora</a>
             </Link>
             <GuyPresenting className="homePage__resourcesImg" />
           </div>
@@ -230,7 +230,7 @@ export default function Home() {
           </Link>
           <Link href="/UnB">
             <a className="resource">
-              <Mail className="resource__icon" />
+              <UnB className="resource__icon" />
               <p className="resource__heading">
                 Estude para<br></br>
                 <span className="uTextStrong">Pas-UnB</span>
@@ -306,7 +306,7 @@ export default function Home() {
             <span className="uHighlight uHighlight--primaryLight">vaga</span>
           </h1>
           <Link href="/register">
-            <a className="btnPrimary">Começar agora</a>
+            <a className="btnPrimary">Comece agora</a>
           </Link>
           <GuyPresenting className="homePage__resourcesImg" />
         </div>
