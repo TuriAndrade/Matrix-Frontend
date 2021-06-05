@@ -1,5 +1,5 @@
 import React from "react";
-import Back from "../../svgs/icons/back";
+import { Back } from "../../svgs/icons";
 import Link from "next/link";
 
 export default function SimpleSideBar() {

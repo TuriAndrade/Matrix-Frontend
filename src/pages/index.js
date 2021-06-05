@@ -1,26 +1,30 @@
-import GirlStudyingMobile from "../svgs/background/girlStudyingMobile";
-import GirlStudying from "../svgs/background/girlStudying";
-import Slides from "../svgs/background/slides";
-import GraduatingStudents from "../svgs/background/graduatingStudents";
-import ClockCalendar from "../svgs/background/clockCalendar";
-import SmallSquares from "../svgs/background/smallSquares";
-import GuyPresenting from "../svgs/background/guyPresenting";
-import BooksAndPlant from "../svgs/background/booksAndPlant";
-import GirlAtDesk from "../svgs/background/girlAtDesk";
-import CurveAndPlant from "../svgs/background/curveAndPlant";
-import SmallCurve from "../svgs/background/smallCurve";
-import Essay from "../svgs/icons/essay";
-import File from "../svgs/icons/file";
-import UnB from "../svgs/icons/UnB";
-import Enem from "../svgs/icons/enem";
-import Class from "../svgs/icons/class";
-import Video from "../svgs/icons/video";
-import List from "../svgs/icons/list";
-import Profile from "../svgs/icons/profile";
-import Mortarboard from "../svgs/icons/mortarboard";
-import Youtube from "../svgs/icons/youtube";
-import Instagram from "../svgs/icons/instagram";
-import Whatsapp from "../svgs/icons/whatsapp";
+import {
+  GirlStudyingMobile,
+  GirlStudying,
+  Slides,
+  GraduatingStudents,
+  ClockCalendar,
+  SmallSquares,
+  GuyPresenting,
+  BooksAndPlant,
+  GirlAtDesk,
+  CurveAndPlant,
+  SmallCurve,
+} from "../svgs/background";
+import {
+  Essay,
+  File,
+  UnB,
+  Enem,
+  Class,
+  Video,
+  List,
+  Profile,
+  Mortarboard,
+  Youtube,
+  Instagram,
+  Whatsapp,
+} from "../svgs/icons";
 import Link from "next/link";
 import MemberCard from "../components/memberCard";
 import Question from "../components/question";

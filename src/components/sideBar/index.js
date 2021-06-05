@@ -1,12 +1,14 @@
 import React from "react";
-import ArrowLeft from "../../svgs/icons/arrowLeft";
-import Essay from "../../svgs/icons/essay";
-import File from "../../svgs/icons/file";
-import UnB from "../../svgs/icons/UnB";
-import Enem from "../../svgs/icons/enem";
-import Class from "../../svgs/icons/class";
-import Video from "../../svgs/icons/video";
-import List from "../../svgs/icons/list";
+import {
+  ArrowLeft,
+  Essay,
+  File,
+  UnB,
+  Enem,
+  Class,
+  Video,
+  List,
+} from "../../svgs/icons";
 import { CSSTransition } from "react-transition-group";
 import { useRouter } from "next/router";
 import Link from "next/link";

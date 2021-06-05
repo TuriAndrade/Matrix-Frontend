@@ -1,7 +1,5 @@
 import React from "react";
-import Youtube from "../../svgs/icons/youtube";
-import Instagram from "../../svgs/icons/instagram";
-import Whatsapp from "../../svgs/icons/whatsapp";
+import { Youtube, Instagram, Whatsapp } from "../../svgs/icons";
 
 export default function MemberCard({
   picture,

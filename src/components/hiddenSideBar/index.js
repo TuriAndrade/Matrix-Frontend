@@ -1,12 +1,14 @@
 import React, { useContext } from "react";
-import ArrowLeft from "../../svgs/icons/arrowLeft";
-import Essay from "../../svgs/icons/essay";
-import File from "../../svgs/icons/file";
-import UnB from "../../svgs/icons/UnB";
-import Enem from "../../svgs/icons/enem";
-import Class from "../../svgs/icons/class";
-import Video from "../../svgs/icons/video";
-import List from "../../svgs/icons/list";
+import {
+  ArrowLeft,
+  Essay,
+  File,
+  UnB,
+  Enem,
+  Class,
+  Video,
+  List,
+} from "../../svgs/icons";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { HiddenSideBarContext } from "../context/hiddenSideBar";
