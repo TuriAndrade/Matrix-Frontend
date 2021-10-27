@@ -42,7 +42,9 @@ export default function Home() {
             oferecer material didático de forma gratuita e acessível a todos.
           </p>
           <Link href="/register">
-            <a className="btnPrimary">Comece agora</a>
+            <a className="btnPrimary">
+              <p className="btnPrimary__text">Comece agora</p>
+            </a>
           </Link>
         </div>
       </div>
@@ -199,7 +201,9 @@ export default function Home() {
               <span className="uHighlight uHighlight--primaryLight">vaga</span>
             </h1>
             <Link href="/register">
-              <a className="btnPrimary">Comece agora</a>
+              <a className="btnPrimary">
+                <p className="btnPrimary__text">Comece agora</p>
+              </a>
             </Link>
             <GuyPresenting className="homePage__resourcesImg" />
           </div>
@@ -310,7 +314,9 @@ export default function Home() {
             <span className="uHighlight uHighlight--primaryLight">vaga</span>
           </h1>
           <Link href="/register">
-            <a className="btnPrimary">Comece agora</a>
+            <a className="btnPrimary">
+              <p className="btnPrimary__text">Comece agora</p>
+            </a>
           </Link>
           <GuyPresenting className="homePage__resourcesImg" />
         </div>

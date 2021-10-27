@@ -114,7 +114,9 @@ export default function NavBar() {
       </div>
       <div className="navBar__item">
         <Link href="/register">
-          <a className="btnPrimary">Cadastrar-se</a>
+          <a className="btnPrimary">
+            <p className="btnPrimary__text">Cadastrar-se</p>
+          </a>
         </Link>
       </div>
     </div>

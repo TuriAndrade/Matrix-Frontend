@@ -9,6 +9,7 @@
   overflow: hidden;
   display: grid;
   grid-auto-rows: minmax(5rem, min-content);
+  z-index: 100;
 
   &-enter {
     opacity: 0;

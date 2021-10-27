@@ -51,7 +51,7 @@ export default function HiddenSideBar() {
                 <p>Como funciona</p>
               </a>
             </Link>
-            <Link href="/help">
+            <Link href="/login">
               <a
                 onClick={() => setHiddenSideBarIn(false)}
                 className="hiddenSideBar__link"
@@ -59,7 +59,7 @@ export default function HiddenSideBar() {
                 <p>Entrar</p>
               </a>
             </Link>
-            <Link href="/help">
+            <Link href="/register">
               <a
                 onClick={() => setHiddenSideBarIn(false)}
                 className="hiddenSideBar__link"

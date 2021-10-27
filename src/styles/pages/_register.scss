@@ -1,0 +1,54 @@
+.registerPage {
+  display: grid;
+  grid-template-columns:
+    [c-left-start] 1fr [c-left-end c-content-start] minmax(auto, 114rem)
+    [c-content-end c-right-start] 1fr [c-right-end];
+  overflow: hidden;
+
+  &__main {
+    grid-column: c-content-start / c-content-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 6.5rem); //viewport - navbar
+    padding: 6rem;
+
+    @include respond(smallPhone) {
+      padding: 3rem;
+    }
+  }
+
+  &__backgroundItems {
+    position: fixed;
+    left: calc(50% + 3rem); //50% + half of navBar height
+    top: calc(50% + 3.25rem); //50% + half of sideBar width
+    transform: translate(-50%, -50%);
+    height: 60rem;
+    z-index: -2;
+
+    @include respond(phone) {
+      left: 50%; //sideBar vanishes
+    }
+
+    @include respond(bigDesktop) {
+      height: 65rem;
+    }
+  }
+
+  &__backgroundGuy {
+    position: fixed;
+    left: calc(50% + 3rem); //50% + half of navBar height
+    top: calc(50% + 3.25rem); //50% + half of sidebar width
+    transform: translate(-190%, -50%);
+    height: 40rem;
+    z-index: -1;
+
+    @include respond(tabPort) {
+      display: none;
+    }
+
+    @include respond(bigDesktop) {
+      height: 45rem;
+    }
+  }
+}

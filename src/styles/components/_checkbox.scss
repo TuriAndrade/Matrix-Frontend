@@ -1,0 +1,32 @@
+.checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+
+  &__option {
+    position: relative;
+    color: $colorBlack;
+    background-color: transparent;
+    font-size: 1.4rem;
+    line-height: 100%;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    text-transform: lowercase;
+    border: 1px solid $colorPrimaryLight;
+    border-radius: 100rem;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+
+    @include respond(phone) {
+      font-size: $defaultFontSize;
+      padding: 0.7rem 1.2rem;
+    }
+
+    &--checked {
+      color: $colorWhite;
+      background-color: $colorPrimaryLight;
+    }
+  }
+}

@@ -3,17 +3,92 @@
   &:link,
   &:visited,
   &:active {
+    position: relative;
     display: inline-block;
     background-color: $colorPrimaryLight;
+    border-radius: 3px;
+    padding: 0.8rem;
+    transition: all 0.2s;
     text-decoration: none;
+  }
+
+  &-enter-active {
+    opacity: 0.9;
+  }
+
+  &-enter-done,
+  &-exit {
+    opacity: 0.9;
+  }
+
+  &__loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    max-height: 100%;
+
+    &-enter {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &-enter-active {
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.2s 0.2s;
+    }
+
+    &-enter-done,
+    &-exit {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &-exit-active {
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.2s;
+    }
+  }
+
+  &__text {
     color: $colorWhite;
     font-size: $defaultFontSize;
     font-weight: 600;
-    border-radius: 3px;
-    padding: 0.8rem;
     line-height: 100%;
-    transition: all 0.2s;
     text-transform: lowercase;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &--icon {
+      font-size: 1.4rem;
+    }
+
+    &-enter {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &-enter-active {
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.2s;
+    }
+
+    &-enter-done,
+    &-exit {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &-exit-active {
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.2s 0.2s;
+    }
   }
 
   @include notTouchDevice() {

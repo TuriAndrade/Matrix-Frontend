@@ -9,10 +9,14 @@
 @import "./components/backgroundImg";
 @import "./components/benefit";
 @import "./components/btn";
+@import "./components/checkbox";
 @import "./components/dropdown";
+@import "./components/form";
+@import "./components/loading";
 @import "./components/memberCard";
 @import "./components/question";
 @import "./components/resource";
+@import "./components/select";
 @import "./components/story";
 
 @import "./layout/container";
@@ -22,3 +26,4 @@
 @import "./layout/sideBar";
 
 @import "./pages/home";
+@import "./pages/register";
