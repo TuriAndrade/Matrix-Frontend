@@ -175,10 +175,10 @@ export default function Register() {
   }
 
   return (
-    <div className="registerPage">
-      <Items className="registerPage__backgroundItems" />
-      <PencilGuy2 className="registerPage__backgroundGuy" />
-      <div className="registerPage__main">
+    <div className="fullPageForm">
+      <Items className="fullPageForm__backgroundItems" />
+      <PencilGuy2 className="fullPageForm__backgroundGuy" />
+      <div className="fullPageForm__main">
         <form
           onSubmit={handleSubmit}
           className={
